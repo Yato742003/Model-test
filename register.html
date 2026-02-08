@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - Đăng ký</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo.svg" alt="Mai Vàng Phú Quý" />
+        <div>
+          <strong>Mai Vàng Phú Quý</strong>
+          <div class="badge">Đăng ký</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="login.html">Đăng nhập</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Đăng ký thành viên</h2>
+        <p>Tham gia để nhận ưu đãi và dịch vụ chăm sóc cá nhân.</p>
+      </div>
+    </div>
+    <div class="card">
+      <form class="form-grid" data-validate method="post" action="server/register.php">
+        <input type="text" name="fullname" placeholder="Họ và tên" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="phone" placeholder="Số điện thoại" required />
+        <input type="password" name="password" placeholder="Mật khẩu" required />
+        <input type="password" name="confirm_password" placeholder="Xác nhận mật khẩu" required />
+        <button class="button" type="submit">Đăng ký</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Ưu đãi thành viên</h3>
+        <p>Giảm giá 5-10% và ưu tiên đặt lịch.</p>
+      </div>
+      <div>
+        <h4>Hỗ trợ</h4>
+        <p>support@maivangphuquy.vn</p>
+      </div>
+      <div>
+        <h4>Khác</h4>
+        <a href="faq.html">Hỏi/đáp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

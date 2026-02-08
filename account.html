@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - Tài khoản</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo.svg" alt="Mai Vàng Phú Quý" />
+        <div>
+          <strong>Mai Vàng Phú Quý</strong>
+          <div class="badge">Tài khoản</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="services.html">Sản phẩm</a>
+        <a href="news.html">Tin tức</a>
+      </div>
+      <div class="nav-links">
+        <a href="login.html">Đăng xuất</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Thông tin cá nhân</h2>
+        <p>Thay đổi thông tin, mật khẩu và ảnh đại diện.</p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card" data-animate>
+        <h3>Hồ sơ</h3>
+        <form class="form-grid" data-validate method="post" action="server/profile.php" enctype="multipart/form-data">
+          <input type="text" name="fullname" placeholder="Họ và tên" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Số điện thoại" required />
+          <input type="file" name="avatar" />
+          <button class="button" type="submit">Cập nhật hồ sơ</button>
+        </form>
+      </div>
+      <div class="card" data-animate>
+        <h3>Đổi mật khẩu</h3>
+        <form class="form-grid" data-validate method="post" action="server/password.php">
+          <input type="password" name="current_password" placeholder="Mật khẩu hiện tại" required />
+          <input type="password" name="new_password" placeholder="Mật khẩu mới" required />
+          <input type="password" name="confirm_password" placeholder="Xác nhận mật khẩu" required />
+          <button class="button" type="submit">Lưu thay đổi</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Bình luận & đánh giá</h2>
+        <p>Chia sẻ trải nghiệm về sản phẩm.</p>
+      </div>
+    </div>
+    <div class="card">
+      <form class="form-grid" data-validate method="post" action="server/comment.php">
+        <select name="target" required>
+          <option value="">Chọn sản phẩm/bài viết</option>
+          <option value="mai_co_thu">Mai cổ thụ</option>
+          <option value="tin_tuc">Bài viết mới</option>
+        </select>
+        <textarea name="comment" placeholder="Nội dung đánh giá" required></textarea>
+        <button class="button" type="submit">Gửi đánh giá</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Quyền lợi thành viên</h3>
+        <p>Ưu đãi riêng, lịch chăm sóc cá nhân hóa.</p>
+      </div>
+      <div>
+        <h4>Hỗ trợ</h4>
+        <p>support@maivangphuquy.vn</p>
+      </div>
+      <div>
+        <h4>Liên kết</h4>
+        <a href="faq.html">Hỏi/đáp</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
