@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - Trang chủ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo.svg" alt="Mai Vàng Phú Quý" />
+        <div>
+          <strong>Mai Vàng Phú Quý</strong>
+          <div class="badge">Doanh nghiệp mai vàng VN</div>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a class="active" href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="pricing.html">Bảng giá</a>
+        <a href="news.html">Tin tức</a>
+        <a href="faq.html">Hỏi/đáp</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+      <div class="nav-links">
+        <a href="login.html">Đăng nhập</a>
+        <a href="register.html">Đăng ký</a>
+        <a href="cart.html">Giỏ hàng</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <h1>Chuyên nghiệp hóa thị trường mai vàng Việt Nam</h1>
+        <p>Mai Vàng Phú Quý cung cấp hệ sinh thái trọn gói: chọn cây, chăm sóc, thuê trưng bày, vận chuyển và tư vấn phong thủy cho cá nhân & doanh nghiệp.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="button" href="products.html">Khám phá sản phẩm</a>
+          <a class="button outline" href="ai-predict.html">AI dự đoán giá mai</a>
+        </div>
+      </div>
+      <div>
+        <div class="info-banner">
+          <span class="tag">Hơn 12 năm kinh nghiệm</span>
+          <h3>Kho dữ liệu mai vàng lớn nhất miền Nam</h3>
+          <p>3.500+ cây mai được phân loại theo tuổi, dáng, chất lượng nụ và lịch chăm sóc chuẩn hóa.</p>
+          <div class="stats">
+            <div class="stat">
+              <strong>98%</strong>
+              <div>Khách hàng hài lòng</div>
+            </div>
+            <div class="stat">
+              <strong>24/7</strong>
+              <div>Hỗ trợ kỹ thuật</div>
+            </div>
+            <div class="stat">
+              <strong>40+</strong>
+              <div>Chuyên gia tạo dáng</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Dịch vụ nổi bật</h2>
+        <p>Chuẩn hóa quy trình chăm sóc, bảo hành và vận hành.</p>
+      </div>
+      <a class="button" href="services.html">Xem tất cả</a>
+    </div>
+    <div class="card-grid" data-animate>
+      <div class="card">
+        <h3>Thuê mai doanh nghiệp</h3>
+        <p>Thiết kế layout trưng bày, lịch chăm sóc tại chỗ, thu hồi sau Tết.</p>
+      </div>
+      <div class="card">
+        <h3>Mai vàng cao cấp</h3>
+        <p>Chứng nhận tuổi cây, hồ sơ chăm sóc, định giá chuyên gia.</p>
+      </div>
+      <div class="card">
+        <h3>Dịch vụ bảo dưỡng</h3>
+        <p>Lịch tưới/bón phân tự động, cập nhật tiến độ qua app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Danh mục mai vàng</h2>
+        <p>Cho phép tìm kiếm và phân trang sản phẩm.</p>
+      </div>
+      <input id="product-search" type="search" placeholder="Tìm kiếm sản phẩm..." />
+    </div>
+    <div id="product-list" class="card-grid" data-animate></div>
+    <div id="product-pagination" class="pagination"></div>
+  </section>
+
+  <section class="section parallax">
+    <div class="section-title" style="color:white;">
+      <div>
+        <h2>Chương trình khách hàng thân thiết</h2>
+        <p>Thành viên nhận ưu đãi, tích điểm, xem lịch chăm sóc cá nhân.</p>
+      </div>
+      <a class="button" href="account.html">Quản lý tài khoản</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Album trưng bày</h2>
+        <p>Carousel hình ảnh nổi bật cho dự án doanh nghiệp.</p>
+      </div>
+    </div>
+    <div class="swiper" data-animate>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/images/product-2.svg" alt="Không gian showroom" />
+          <div>
+            <h3>Showroom 4 mùa</h3>
+            <p>Không gian trưng bày 600m2, sẵn sàng tư vấn trực tiếp.</p>
+            <span class="tag">Showroom</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/product-4.svg" alt="Dự án lễ hội" />
+          <div>
+            <h3>Dự án lễ hội</h3>
+            <p>Thiết kế sân khấu, cổng chào, sảnh lễ tân theo chủ đề mai vàng.</p>
+            <span class="tag">Sự kiện</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/product-6.svg" alt="Vườn chăm sóc" />
+          <div>
+            <h3>Vườn chăm sóc chuẩn hóa</h3>
+            <p>Ứng dụng IoT theo dõi nhiệt độ, ánh sáng, độ ẩm theo vùng.</p>
+            <span class="tag">Nông trại</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Tin tức mới</h2>
+        <p>Phân trang và tìm kiếm nhanh theo từ khóa.</p>
+      </div>
+      <input id="news-search" type="search" placeholder="Tìm kiếm tin tức..." />
+    </div>
+    <div id="news-list" class="card-grid" data-animate></div>
+    <div id="news-pagination" class="pagination"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Mai Vàng Phú Quý</h3>
+        <p>Đồng hành cùng vẻ đẹp truyền thống Việt Nam.</p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <p>Hotline: 0909 123 456</p>
+        <p>Email: hello@maivangphuquy.vn</p>
+      </div>
+      <div>
+        <h4>Liên kết nhanh</h4>
+        <a href="pricing.html">Bảng giá</a><br />
+        <a href="ai-predict.html">AI dự đoán giá</a><br />
+        <a href="admin.html">Trang quản trị</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

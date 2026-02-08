@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - Quản trị</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta21/dist/css/tabler.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="theme-light">
+  <div class="page">
+    <aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="light">
+      <div class="container-fluid">
+        <h1 class="navbar-brand navbar-brand-autodark">
+          <a href="index.html">
+            <img src="assets/images/logo.svg" width="32" height="32" alt="Mai Vàng Phú Quý" />
+            Mai Vàng Phú Quý
+          </a>
+        </h1>
+        <div class="collapse navbar-collapse" id="sidebar-menu">
+          <ul class="navbar-nav pt-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#content">Quản lý nội dung</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacts">Liên hệ khách hàng</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">Hỏi/đáp</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Sản phẩm</a></li>
+            <li class="nav-item"><a class="nav-link" href="#orders">Giỏ hàng & đơn hàng</a></li>
+            <li class="nav-item"><a class="nav-link" href="#posts">Tin tức</a></li>
+            <li class="nav-item"><a class="nav-link" href="#comments">Bình luận</a></li>
+            <li class="nav-item"><a class="nav-link" href="#media">Tài nguyên & Upload</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <div class="page-wrapper">
+      <div class="page-header">
+        <div class="container-xl">
+          <div class="row align-items-center">
+            <div class="col">
+              <h2 class="page-title">Bảng điều khiển quản trị</h2>
+              <div class="text-muted">Quản lý nội dung, sản phẩm, liên hệ và đơn hàng.</div>
+            </div>
+            <div class="col-auto">
+              <a class="btn btn-primary" href="index.html">Xem website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-body">
+        <div class="container-xl">
+          <section id="dashboard" class="mb-5">
+            <div class="row row-deck row-cards">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="subheader">Thành viên</div>
+                    <div class="h1">1.250</div>
+                    <div class="text-muted">Hoạt động tháng này</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="subheader">Liên hệ mới</div>
+                    <div class="h1">32</div>
+                    <div class="text-muted">Chưa phản hồi</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="subheader">Đơn hàng</div>
+                    <div class="h1">18</div>
+                    <div class="text-muted">Đang xử lý</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="subheader">Bài viết</div>
+                    <div class="h1">64</div>
+                    <div class="text-muted">Đã xuất bản</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="content" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Quản lý nội dung trang chủ & liên hệ</h3>
+              </div>
+              <div class="card-body">
+                <form class="row g-3" data-validate method="post" action="server/page-content.php" enctype="multipart/form-data">
+                  <div class="col-md-6">
+                    <label class="form-label">Tiêu đề trang chủ</label>
+                    <input class="form-control" type="text" name="home_title" placeholder="Ví dụ: Chuyên nghiệp hóa thị trường mai vàng" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Hotline</label>
+                    <input class="form-control" type="tel" name="hotline" placeholder="0909 123 456" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Địa chỉ công ty</label>
+                    <input class="form-control" type="text" name="address" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Logo mới</label>
+                    <input class="form-control" type="file" name="logo" accept="image/*" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Ảnh giới thiệu</label>
+                    <input class="form-control" type="file" name="about_image" accept="image/*" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Mô tả giới thiệu</label>
+                    <textarea class="form-control" name="intro" rows="3" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Tóm tắt trang giới thiệu</label>
+                    <textarea class="form-control" name="about_summary" rows="3" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-success" type="submit">Lưu thay đổi</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <section id="contacts" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Quản lý liên hệ khách hàng</h3>
+                <div class="card-actions">
+                  <input class="form-control" type="search" placeholder="Tìm kiếm liên hệ..." />
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter">
+                  <thead>
+                    <tr>
+                      <th>Khách hàng</th>
+                      <th>Email</th>
+                      <th>Trạng thái</th>
+                      <th>Ngày gửi</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nguyễn Minh An</td>
+                      <td>minhan@gmail.com</td>
+                      <td><span class="badge bg-yellow">Chưa đọc</span></td>
+                      <td>12/03/2024</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">Đánh dấu đã phản hồi</button>
+                        <button class="btn btn-sm btn-outline-danger">Xoá</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Trần Thuỷ Tiên</td>
+                      <td>tien@gmail.com</td>
+                      <td><span class="badge bg-green">Đã phản hồi</span></td>
+                      <td>10/03/2024</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-secondary">Xem</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <ul class="pagination mb-0">
+                  <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                  <li class="page-item active"><span class="page-link">1</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="faq" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Quản lý câu hỏi & đáp</h3>
+              </div>
+              <div class="card-body">
+                <form class="row g-3" data-validate method="post" action="server/faq-admin.php">
+                  <div class="col-md-6">
+                    <label class="form-label">Câu hỏi</label>
+                    <input class="form-control" type="text" name="question" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Câu trả lời</label>
+                    <input class="form-control" type="text" name="answer" required />
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Thêm FAQ</button>
+                  </div>
+                </form>
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter">
+                  <thead>
+                    <tr>
+                      <th>Câu hỏi</th>
+                      <th>Trạng thái</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mai vàng nên tưới bao nhiêu lần?</td>
+                      <td><span class="badge bg-green">Hiển thị</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">Sửa</button>
+                        <button class="btn btn-sm btn-outline-danger">Xoá</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <ul class="pagination mb-0">
+                  <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                  <li class="page-item active"><span class="page-link">1</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="products" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Quản lý sản phẩm</h3>
+                <div class="card-actions">
+                  <input class="form-control" type="search" placeholder="Tìm kiếm sản phẩm..." />
+                </div>
+              </div>
+              <div class="card-body">
+                <form class="row g-3" data-validate method="post" action="server/product.php" enctype="multipart/form-data">
+                  <div class="col-md-4">
+                    <label class="form-label">Tên sản phẩm</label>
+                    <input class="form-control" type="text" name="name" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Loại</label>
+                    <input class="form-control" type="text" name="category" required />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Giá</label>
+                    <input class="form-control" type="number" name="price" min="0" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Hình ảnh</label>
+                    <input class="form-control" type="file" name="image" accept="image/*" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Tồn kho</label>
+                    <input class="form-control" type="number" name="stock" min="0" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Mô tả</label>
+                    <textarea class="form-control" name="description" rows="3" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-success" type="submit">Thêm sản phẩm</button>
+                  </div>
+                </form>
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter">
+                  <thead>
+                    <tr>
+                      <th>Sản phẩm</th>
+                      <th>Giá</th>
+                      <th>Trạng thái</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mai vàng cổ thụ 12 năm</td>
+                      <td>18.000.000đ</td>
+                      <td><span class="badge bg-green">Đang bán</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">Sửa</button>
+                        <button class="btn btn-sm btn-outline-danger">Xoá</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <ul class="pagination mb-0">
+                  <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                  <li class="page-item active"><span class="page-link">1</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="orders" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Quản lý giỏ hàng & đơn hàng</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter">
+                  <thead>
+                    <tr>
+                      <th>Mã đơn</th>
+                      <th>Khách hàng</th>
+                      <th>Trạng thái</th>
+                      <th>Tổng tiền</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#MV2304</td>
+                      <td>Phan Thị Thảo</td>
+                      <td><span class="badge bg-yellow">Đang xử lý</span></td>
+                      <td>22.200.000đ</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">Cập nhật trạng thái</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <ul class="pagination mb-0">
+                  <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                  <li class="page-item active"><span class="page-link">1</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="posts" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Quản lý tin tức</h3>
+                <div class="card-actions">
+                  <input class="form-control" type="search" placeholder="Tìm kiếm bài viết..." />
+                </div>
+              </div>
+              <div class="card-body">
+                <form class="row g-3" data-validate method="post" action="server/post.php">
+                  <div class="col-md-6">
+                    <label class="form-label">Tiêu đề</label>
+                    <input class="form-control" type="text" name="title" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Từ khóa</label>
+                    <input class="form-control" type="text" name="keywords" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Mô tả</label>
+                    <textarea class="form-control" name="description" rows="2" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Nội dung</label>
+                    <textarea class="form-control" name="content" rows="4" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-success" type="submit">Đăng bài</button>
+                  </div>
+                </form>
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter">
+                  <thead>
+                    <tr>
+                      <th>Bài viết</th>
+                      <th>Trạng thái</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Xu hướng mai vàng 2024</td>
+                      <td><span class="badge bg-green">Published</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary">Sửa</button>
+                        <button class="btn btn-sm btn-outline-danger">Xoá</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <ul class="pagination mb-0">
+                  <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                  <li class="page-item active"><span class="page-link">1</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="comments" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Quản lý bình luận/đánh giá</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter">
+                  <thead>
+                    <tr>
+                      <th>Người dùng</th>
+                      <th>Nội dung</th>
+                      <th>Trạng thái</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Ngọc Anh</td>
+                      <td>Bài viết rất hữu ích.</td>
+                      <td><span class="badge bg-yellow">Chờ duyệt</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-success">Duyệt</button>
+                        <button class="btn btn-sm btn-outline-danger">Xoá</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <ul class="pagination mb-0">
+                  <li class="page-item disabled"><span class="page-link">Trước</span></li>
+                  <li class="page-item active"><span class="page-link">1</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Sau</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="media" class="mb-5">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Upload hình ảnh</h3>
+              </div>
+              <div class="card-body">
+                <form class="row g-3" data-validate method="post" action="server/upload.php" enctype="multipart/form-data">
+                  <div class="col-md-6">
+                    <label class="form-label">Chọn hình ảnh</label>
+                    <input class="form-control" type="file" name="image" accept="image/*" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Ghi chú</label>
+                    <input class="form-control" type="text" name="note" required />
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Tải lên server</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta21/dist/js/tabler.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

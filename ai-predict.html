@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - AI dự đoán giá</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo.svg" alt="Mai Vàng Phú Quý" />
+        <div>
+          <strong>Mai Vàng Phú Quý</strong>
+          <div class="badge">AI dự đoán giá</div>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="pricing.html">Bảng giá</a>
+        <a href="news.html">Tin tức</a>
+        <a href="faq.html">Hỏi/đáp</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+      <div class="nav-links">
+        <a href="account.html">Tài khoản</a>
+        <a href="admin.html">Quản trị</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Mô hình dự đoán giá cây mai</h2>
+        <p>Dựa trên dữ liệu nội bộ và các chỉ số cây trồng.</p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card" data-animate>
+        <h3>Thông số đầu vào</h3>
+        <form id="prediction-form" class="form-grid">
+          <input type="number" name="age" min="1" placeholder="Tuổi cây (năm)" required />
+          <input type="number" name="height" step="0.1" min="0.3" placeholder="Chiều cao (m)" required />
+          <input type="number" name="trunk" step="0.1" min="5" placeholder="Vòng thân (cm)" required />
+          <select name="variety" required>
+            <option value="">Loại mai</option>
+            <option value="co_thu">Cổ thụ</option>
+            <option value="bonsai">Bonsai</option>
+            <option value="thuong_mai">Thương mại</option>
+            <option value="mini">Mini</option>
+          </select>
+          <select name="maintenance" required>
+            <option value="">Mức chăm sóc</option>
+            <option value="tieu_chuan">Tiêu chuẩn</option>
+            <option value="chuyen_sau">Chuyên sâu</option>
+          </select>
+          <button class="button" type="submit">Dự đoán giá</button>
+        </form>
+      </div>
+      <div class="card" data-animate>
+        <h3>Kết quả dự đoán</h3>
+        <p class="notice">AI sẽ trả về mức giá dự kiến dựa trên dữ liệu lịch sử.</p>
+        <h2 id="prediction-result">Giá dự đoán: --</h2>
+        <p>Gợi ý: hãy nhập đủ thông tin để nhận dự đoán chính xác hơn.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Bộ dữ liệu tham chiếu</h2>
+        <p>AI đang được huấn luyện trên dữ liệu 3.500+ cây mai.</p>
+      </div>
+    </div>
+    <div class="card-grid" data-animate>
+      <div class="card">
+        <h3>Đầu vào</h3>
+        <p>Tuổi cây, chiều cao, vòng thân, loại mai, lịch chăm sóc.</p>
+      </div>
+      <div class="card">
+        <h3>Đầu ra</h3>
+        <p>Giá dự kiến, biên độ dao động, gợi ý dịch vụ.</p>
+      </div>
+      <div class="card">
+        <h3>Bảo mật</h3>
+        <p>Dữ liệu được ẩn danh và lưu trữ theo tiêu chuẩn doanh nghiệp.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Đặt lịch thẩm định</h3>
+        <p>Kết nối chuyên gia để định giá chính xác tại vườn.</p>
+      </div>
+      <div>
+        <h4>Email</h4>
+        <p>ai@maivangphuquy.vn</p>
+      </div>
+      <div>
+        <h4>Khác</h4>
+        <a href="pricing.html">Bảng giá</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

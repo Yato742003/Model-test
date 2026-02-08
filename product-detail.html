@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - Chi tiết sản phẩm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo.svg" alt="Mai Vàng Phú Quý" />
+        <div>
+          <strong>Mai Vàng Phú Quý</strong>
+          <div class="badge">Chi tiết sản phẩm</div>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="pricing.html">Bảng giá</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+      <div class="nav-links">
+        <a href="cart.html">Giỏ hàng</a>
+        <a href="checkout.html">Thanh toán</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span>/</span>
+      <a href="products.html">Sản phẩm</a>
+      <span>/</span>
+      <span>Chi tiết</span>
+    </div>
+    <div id="product-detail"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Đánh giá khách hàng</h2>
+        <p>Thành viên có thể để lại bình luận.</p>
+      </div>
+    </div>
+    <div class="card">
+      <form class="form-grid" data-validate method="post" action="server/comment.php">
+        <input type="text" name="fullname" placeholder="Họ và tên" required />
+        <textarea name="comment" placeholder="Nội dung đánh giá" required></textarea>
+        <button class="button" type="submit">Gửi đánh giá</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Hỗ trợ mua hàng</h3>
+        <p>Chăm sóc khách hàng 24/7.</p>
+      </div>
+      <div>
+        <h4>Hotline</h4>
+        <p>0909 123 456</p>
+      </div>
+      <div>
+        <h4>Khác</h4>
+        <a href="faq.html">Hỏi/đáp</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

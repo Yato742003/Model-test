@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - Hỏi/đáp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo.svg" alt="Mai Vàng Phú Quý" />
+        <div>
+          <strong>Mai Vàng Phú Quý</strong>
+          <div class="badge">Hỏi/đáp</div>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="pricing.html">Bảng giá</a>
+        <a href="news.html">Tin tức</a>
+        <a class="active" href="faq.html">Hỏi/đáp</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+      <div class="nav-links">
+        <a href="account.html">Tài khoản</a>
+        <a href="admin.html">Quản trị</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Câu hỏi thường gặp</h2>
+        <p>Giải đáp nhanh cho khách hàng và thành viên.</p>
+      </div>
+    </div>
+    <div class="card-grid" data-animate>
+      <div class="card">
+        <h3>Mai vàng nên tưới bao nhiêu lần?</h3>
+        <p>Tuỳ mùa, trung bình 2 lần/tuần. Vào mùa khô tăng lên 3 lần/tuần.</p>
+      </div>
+      <div class="card">
+        <h3>Có hỗ trợ vận chuyển toàn quốc không?</h3>
+        <p>Chúng tôi hỗ trợ vận chuyển bằng xe chuyên dụng cho các tỉnh phía Nam.</p>
+      </div>
+      <div class="card">
+        <h3>Thành viên được ưu đãi gì?</h3>
+        <p>Giảm 5-10% dịch vụ, ưu tiên đặt lịch chăm sóc.</p>
+      </div>
+      <div class="card">
+        <h3>AI dự đoán giá hoạt động như thế nào?</h3>
+        <p>Dựa trên dữ liệu tuổi cây, chiều cao, vòng thân và lịch chăm sóc.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Gửi câu hỏi mới</h2>
+        <p>Chúng tôi sẽ cập nhật phản hồi trong vòng 24h.</p>
+      </div>
+    </div>
+    <div class="card">
+      <form class="form-grid" data-validate method="post" action="server/faq.php">
+        <input type="text" name="fullname" placeholder="Họ và tên" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="question" placeholder="Câu hỏi của bạn" required></textarea>
+        <button class="button" type="submit">Gửi câu hỏi</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Hỗ trợ kỹ thuật</h3>
+        <p>Trò chuyện trực tuyến hoặc hotline 0909 123 456.</p>
+      </div>
+      <div>
+        <h4>Khung giờ</h4>
+        <p>8:00 - 18:00 hàng ngày</p>
+      </div>
+      <div>
+        <h4>Khác</h4>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

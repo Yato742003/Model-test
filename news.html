@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mai Vàng Phú Quý - Tin tức</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/images/logo.svg" alt="Mai Vàng Phú Quý" />
+        <div>
+          <strong>Mai Vàng Phú Quý</strong>
+          <div class="badge">Tin tức</div>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="pricing.html">Bảng giá</a>
+        <a class="active" href="news.html">Tin tức</a>
+        <a href="faq.html">Hỏi/đáp</a>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+      <div class="nav-links">
+        <a href="ai-predict.html">AI định giá</a>
+        <a href="admin.html">Quản trị</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Tin tức & bài viết</h2>
+        <p>Quản lý bài viết, từ khóa, mô tả và SEO.</p>
+      </div>
+      <input id="news-search" type="search" placeholder="Tìm kiếm tin tức..." />
+    </div>
+    <div id="news-list" class="card-grid" data-animate></div>
+    <div id="news-pagination" class="pagination"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Đăng ký nhận tin</h2>
+        <p>Nhận nội dung mới qua email mỗi tuần.</p>
+      </div>
+    </div>
+    <div class="card">
+      <form class="form-grid" data-validate method="post" action="server/newsletter.php">
+        <input type="email" name="email" placeholder="Email" required />
+        <button class="button" type="submit">Đăng ký</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Kho tri thức mai vàng</h3>
+        <p>Bài viết chuyên sâu, hướng dẫn kỹ thuật.</p>
+      </div>
+      <div>
+        <h4>Liên kết</h4>
+        <a href="services.html">Sản phẩm</a><br />
+        <a href="pricing.html">Bảng giá</a>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <a href="contact.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
